@@ -52,6 +52,9 @@
 		2A54C30D17D769F300646FC6 /* xstrdup.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A54C2E417D769F300646FC6 /* xstrdup.c */; };
 		2A54C31417D76BDE00646FC6 /* TNEFCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A54C31217D76BDE00646FC6 /* TNEFCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A54C31517D76BDE00646FC6 /* TNEFCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A54C31317D76BDE00646FC6 /* TNEFCore.m */; };
+		2A54C31B17D776E700646FC6 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54C31A17D776E700646FC6 /* QuickLook.framework */; };
+		2A54C31D17D776EA00646FC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54C31C17D776EA00646FC6 /* CoreGraphics.framework */; };
+		2A54C31F17D776EE00646FC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54C31E17D776EE00646FC6 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +106,9 @@
 		2A54C2E417D769F300646FC6 /* xstrdup.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xstrdup.c; sourceTree = "<group>"; };
 		2A54C31217D76BDE00646FC6 /* TNEFCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNEFCore.h; sourceTree = "<group>"; };
 		2A54C31317D76BDE00646FC6 /* TNEFCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNEFCore.m; sourceTree = "<group>"; };
+		2A54C31A17D776E700646FC6 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		2A54C31C17D776EA00646FC6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2A54C31E17D776EE00646FC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A54C31F17D776EE00646FC6 /* UIKit.framework in Frameworks */,
+				2A54C31D17D776EA00646FC6 /* CoreGraphics.framework in Frameworks */,
+				2A54C31B17D776E700646FC6 /* QuickLook.framework in Frameworks */,
 				2A54C2AD17D769D500646FC6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +146,9 @@
 		2A54C2AB17D769D500646FC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A54C31E17D776EE00646FC6 /* UIKit.framework */,
+				2A54C31C17D776EA00646FC6 /* CoreGraphics.framework */,
+				2A54C31A17D776E700646FC6 /* QuickLook.framework */,
 				2A54C2AC17D769D500646FC6 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -457,12 +469,15 @@
 					armv6,
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TNEF/TNEF-Prefix.pch";
 				INFOPLIST_FILE = "TNEF/TNEF-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -476,6 +491,8 @@
 					armv6,
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
