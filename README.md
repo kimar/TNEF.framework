@@ -5,7 +5,7 @@ TNEF.framework
 
 To extract the TNEF's content, please use the `TNEFCore` class, e.g.:
 
-``objective-c
+```objective-c
 [TNEFCore extractWinmailDatFromPathWithURL:[[NSBundle mainBundle] URLForResource:@"winmail" withExtension:@"dat"]
                                toPathAtURL:[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@TNEF", NSTemporaryDirectory()]]];
 ```
